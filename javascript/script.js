@@ -88,3 +88,5 @@ function game() {
         console.log(`The final score is ${playerScore}-${computerScore}. You tied in the tournament!`)
     }
 }
+
+game();
