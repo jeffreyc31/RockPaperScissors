@@ -70,7 +70,6 @@ function game() {
         let message = playRound();
         console.log(message);
         let resultPrint = message.slice(0, 8);
-        console.log(resultPrint);
 
         if (resultPrint === winMessage) {
             playerScore++;
