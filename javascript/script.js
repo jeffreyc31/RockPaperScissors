@@ -62,30 +62,5 @@ function playRound(playerSelection, computerSelection) {
 /*console.log(playRound());*/
 
 function game() {
-    let playerScore = 0;
-    let computerScore = 0;
-    const winMessage = "You win!";
-    const loseMessage = "You lose";
-    for (let i = 0; i < 5; i++) {
-        let message = playRound();
-        console.log(message);
-        let resultPrint = message.slice(0, 8);
 
-        if (resultPrint === winMessage) {
-            playerScore++;
-        } else if (resultPrint === loseMessage) {
-            computerScore++;
-        }
-
-        console.log(`Your score is ${playerScore} so far. The computer's score is ${computerScore}.`)
-    }
-    if (playerScore > computerScore) {
-        console.log(`The final score is ${playerScore}-${computerScore}. You won the tournament!`)
-    } else if (playerScore < computerScore) {
-        console.log(`The final score is ${playerScore}-${computerScore}. You lose the tournament!`)
-    } else {
-        console.log(`The final score is ${playerScore}-${computerScore}. You tied in the tournament!`)
-    }
 }
-
-game();
