@@ -18,10 +18,8 @@ function playRound(playerSelection, computerSelection) {
     let result;
     let tracker;
     computerSelection = computerPlay();
-    /*console.log(computerSelection);*/
-    playerSelection = prompt("Do you choose rock, paper, or scissors?");
+    //playerSelection = prompt("Do you choose rock, paper, or scissors?");
     playerSelection = playerSelection.toLowerCase();
-    /*console.log(playerSelection);*/
 
     if (playerSelection === computerSelection) {
         tracker = 0;
@@ -58,9 +56,4 @@ function playRound(playerSelection, computerSelection) {
         }
     }
     return result;
-}
-/*console.log(playRound());*/
-
-function game() {
-
 }
