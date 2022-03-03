@@ -4,6 +4,27 @@ const rock = document.getElementById("rock");
 const paper = document.getElementById("paper");
 const scissors = document.getElementById("scissors");
 const scoreMessage = document.getElementById("message");
+const winMessage = "You win the game!";
+const loseMessage = "You lost the game!";
+const win = document.createElement('h3')
+const buttons = document.querySelectorAll('button');
+
+function computerWin() {
+    if (computer == 5) {
+        win.textContent = loseMessage;
+        container.appendChild(win);
+        buttons.forEach(button => button.disabled = true);
+    }
+}
+
+function playerWin() {
+    if (player == 5) {
+        win.textContent = winMessage;
+        container.appendChild(win);
+        buttons.forEach(button => button.disabled = true);
+    }
+}
+
 
 function computerPlay() {
     let randomInt = Math.floor(Math.random() * 3);
@@ -69,16 +90,23 @@ rock.addEventListener('click', function(event) {
     let result = playRound('rock', '');
     message.textContent = result;
     score.textContent = `${player} - ${computer}`;
+    playerWin();
+    computerWin();
 });
 
 paper.addEventListener('click', function(event) {
     let result = playRound('paper', '');
     message.textContent = result;
     score.textContent = `${player} - ${computer}`;
+    playerWin();
+    computerWin();
 });
 
 scissors.addEventListener('click', function(event) {
     let result = playRound('scissors', '');
     message.textContent = result;
     score.textContent = `${player} - ${computer}`;
+
+    playerWin();
+    computerWin();
 });
