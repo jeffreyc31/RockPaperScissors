@@ -1,5 +1,9 @@
 let computer = 0;
 let player = 0;
+const rock = document.getElementById("rock");
+const paper = document.getElementById("paper");
+const scissors = document.getElementById("scissors");
+const scoreMessage = document.getElementById("message");
 
 function computerPlay() {
     let randomInt = Math.floor(Math.random() * 3);
@@ -60,3 +64,21 @@ function playRound(playerSelection, computerSelection) {
     }
     return result;
 }
+
+rock.addEventListener('click', function(event) {
+    let result = playRound('rock', '');
+    message.textContent = result;
+    score.textContent = `${player} - ${computer}`;
+});
+
+paper.addEventListener('click', function(event) {
+    let result = playRound('paper', '');
+    message.textContent = result;
+    score.textContent = `${player} - ${computer}`;
+});
+
+scissors.addEventListener('click', function(event) {
+    let result = playRound('scissors', '');
+    message.textContent = result;
+    score.textContent = `${player} - ${computer}`;
+});
