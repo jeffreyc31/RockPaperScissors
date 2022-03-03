@@ -1,3 +1,6 @@
+let computer = 0;
+let player = 0;
+
 function computerPlay() {
     let randomInt = Math.floor(Math.random() * 3);
     let computerOption;
@@ -27,26 +30,29 @@ function playRound(playerSelection, computerSelection) {
             case "rock":
                 if (computerSelection === "paper") {
                     result = "You lose! Paper beats rock."
+                    computer++;
                 } else {
                     result = "You win! Rock beats scissors."
-
+                    player++;
                 }
                 break;
             case "paper":
                 if (computerSelection === "scissors") {
                     result = "You lose! Scissors beats paper."
+                    computer++;
 
                 } else {
                     result = "You win! Paper beats rock."
-
+                    computer++;
                 }
                 break;
             case "scissors":
                 if (computerSelection === "rock") {
                     result = "You lose! Rock beats scissors."
-
+                    computer++;
                 } else {
                     result = "You win! Scissors beats paper."
+                    player++;
 
                 }
                 break;

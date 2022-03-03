@@ -28,16 +28,19 @@
         rock.addEventListener('click', function(event) {
             let result = playRound('rock', '');
             message.textContent = result;
+            score.textContent = `${player} - ${computer}`;
         });
 
         paper.addEventListener('click', function(event) {
-            let result = playRound('rock', '');
+            let result = playRound('paper', '');
             message.textContent = result;
+            score.textContent = `${player} - ${computer}`;
         });
 
         scissors.addEventListener('click', function(event) {
-            let result = playRound('rock', '');
+            let result = playRound('scissors', '');
             message.textContent = result;
+            score.textContent = `${player} - ${computer}`;
         });
     </script>
 
