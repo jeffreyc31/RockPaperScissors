@@ -10,6 +10,11 @@
 </head>
 
 <body>
+    <div id="container">
+        <h2>Scoreboard</h2>
+        <h3 id="score">0 - 0</h3>
+        <h3 id="message">Good luck!</h3>
+    </div>
     <button id="rock">Rock</button>
     <button id="paper">Paper</button>
     <button id="scissors">Scissors</button>
@@ -18,17 +23,21 @@
         const rock = document.getElementById("rock");
         const paper = document.getElementById("paper");
         const scissors = document.getElementById("scissors");
+        const scoreMessage = document.getElementById("message");
 
         rock.addEventListener('click', function(event) {
-            console.log(playRound("rock", ""));
+            let result = playRound('rock', '');
+            message.textContent = result;
         });
 
         paper.addEventListener('click', function(event) {
-            console.log(playRound("paper", ""));
+            let result = playRound('rock', '');
+            message.textContent = result;
         });
 
         scissors.addEventListener('click', function(event) {
-            console.log(playRound("scissors", ""));
+            let result = playRound('rock', '');
+            message.textContent = result;
         });
     </script>
 
